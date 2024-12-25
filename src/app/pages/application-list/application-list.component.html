@@ -1,0 +1,25 @@
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Annul Income</th>
+        <th scope="col">Credit score</th>
+        <th scope="col">Credit score</th>
+      </tr>
+    </thead>
+    <tbody>
+            @for(item of userApploanlist;track $index)
+            {
+                <tr scope="row">
+                        <td>{{ item.fullName }}</td>
+                        <td>{{ item.annualIncome }}</td>
+                        <td>{{ item.creditScore }}</td>
+                        <td>{{ item.creditScore }}</td>
+              </tr>
+            }
+
+    </tbody>
+  </table>
+
+
