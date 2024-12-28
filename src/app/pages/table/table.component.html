@@ -1,0 +1,47 @@
+<table class="table table-hover" border="1">
+    <thead>
+      <tr>
+          @for(column of displayedColumns;track $index)
+          {
+            <th scope="row"  (click)="sort(column)">
+                    {{ column }}
+           </th>
+          }
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr scope="col" *ngFor="let element of dataSource | slice: (pageIndex * pageSize):(pageIndex * pageSize) + pageSize">
+        <td>
+          {{ element.position}}
+        </td>
+        <td>
+          {{ element.name}}
+        </td>
+        <td>
+          {{ element.weight}}
+        </td>
+        <td>
+          {{ element.symbol}}
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+  
+  <div>
+    <select [(ngModel)]="pageSize" (change)="onPageChange($event)">
+      @for(size of pageSizeOptions;track $index)
+      {
+        <option  [value]="size">
+                {{ size }}
+              </option>
+
+      }
+
+
+    </select>
+    <span> of {{ dataSource.length }} </span>
+  </div>
+  
+  <input type="text" placeholder="Filter" [(ngModel)]="filter" (keyup)="applyFilter()">
