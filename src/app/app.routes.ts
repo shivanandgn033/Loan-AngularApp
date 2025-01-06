@@ -4,6 +4,7 @@ import { ApplicationListComponent } from './pages/application-list/application-l
 import { ParentComponent } from './pages/parent/parent.component';
 import { ViewChildExampleComponent } from './pages/view-child-example/view-child-example.component';
 import { SignalsComponent } from './pages/signals/signals.component';
+import { LinkedsignalComponent } from './pages/linkedsignal/linkedsignal.component';
 
 export const routes: Routes = [
     {
@@ -26,6 +27,10 @@ export const routes: Routes = [
     {
         path:"signaldemo",
         component:SignalsComponent
+    },
+    {
+        path:"linkedsignal",
+        component:LinkedsignalComponent
     },
     {
         path:"viewchild",
