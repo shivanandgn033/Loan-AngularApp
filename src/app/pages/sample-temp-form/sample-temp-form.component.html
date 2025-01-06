@@ -1,0 +1,78 @@
+<h2>Template-Driven Form</h2>
+
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" class="form-control"
+           [(ngModel)]="user.name" #name="ngModel" required minlength="3">
+    @if(name.invalid && (name.dirty || name.touched)){
+    <div class="alert alert-danger">
+     @if(name.errors?.['required']){
+      <div >
+        Name is required.
+      </div>
+    }
+
+    @if(name.errors?.['minlength']){
+      <div >
+        Name must be at least 3 characters long.
+      </div>
+    }
+    </div>
+}
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" class="form-control"
+           [(ngModel)]="user.email" #email="ngModel" required email>
+
+           @if(email.invalid && (email.dirty || email.touched)){
+    <div class="alert alert-danger">
+        @if(email.errors?.['required']){
+      <div>
+        Email is required.
+      </div>
+    }
+    @if(email.errors?.['email']){
+      <div >
+        Email is invalid.
+      </div>
+    }
+    </div>
+
+}
+  </div>
+
+  <div class="form-group">
+    <label for="country">Country:</label>
+    <select id="country" name="country" class="form-control"
+            [(ngModel)]="user.country" #country="ngModel" required>
+      <option value="">Select a country</option>
+      <option value="USA">USA</option>
+      <option value="Canada">Canada</option>
+      <option value="UK">UK</option>
+    </select>
+     @if(country.invalid && (country.dirty || country.touched)){
+     <div 
+         class="alert alert-danger">
+         @if(country.errors?.['required']){
+      <div>
+        Country is required.
+      </div>
+    }
+    </div>
+}
+
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Submit</button>
+  <button type="button" class="btn btn-secondary" (click)="resetForm(myForm)">Reset</button>
+
+  @if(isSubmitted){
+  <div >
+    <h3>Submitted Data:</h3>
+    <pre>{{ user }}</pre>
+  </div>
+  }
+</form>

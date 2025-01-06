@@ -5,6 +5,9 @@ import { ParentComponent } from './pages/parent/parent.component';
 import { ViewChildExampleComponent } from './pages/view-child-example/view-child-example.component';
 import { SignalsComponent } from './pages/signals/signals.component';
 import { LinkedsignalComponent } from './pages/linkedsignal/linkedsignal.component';
+import { Component } from '@angular/core';
+import { SampleTempFormComponent } from './pages/sample-temp-form/sample-temp-form.component';
+
 
 export const routes: Routes = [
     {
@@ -31,6 +34,10 @@ export const routes: Routes = [
     {
         path:"linkedsignal",
         component:LinkedsignalComponent
+    },
+    {
+        path:"tempformexmple",
+        component: SampleTempFormComponent
     },
     {
         path:"viewchild",
