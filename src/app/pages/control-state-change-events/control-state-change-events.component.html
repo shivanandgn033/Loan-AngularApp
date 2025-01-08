@@ -1,0 +1,8 @@
+<p>control-state-change-events works!</p>
+<input type="text" [formControl]="myControl" value="">
+    @if(myControl.hasError('required')){
+    <div>This field is required</div>
+    }
+    @if(myControl.hasError('email')){
+    <div>Invalid email format</div>
+    }

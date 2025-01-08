@@ -7,6 +7,7 @@ import { SignalsComponent } from './pages/signals/signals.component';
 import { LinkedsignalComponent } from './pages/linkedsignal/linkedsignal.component';
 import { Component } from '@angular/core';
 import { SampleTempFormComponent } from './pages/sample-temp-form/sample-temp-form.component';
+import { ControlStateChangeEventsComponent } from './pages/control-state-change-events/control-state-change-events.component';
 
 
 export const routes: Routes = [
@@ -38,6 +39,10 @@ export const routes: Routes = [
     {
         path:"tempformexmple",
         component: SampleTempFormComponent
+    },
+    {
+        path: "ControlStateChangeEvents",
+        component:ControlStateChangeEventsComponent
     },
     {
         path:"viewchild",
