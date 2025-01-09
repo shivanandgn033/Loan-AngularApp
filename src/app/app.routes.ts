@@ -8,6 +8,8 @@ import { LinkedsignalComponent } from './pages/linkedsignal/linkedsignal.compone
 import { Component } from '@angular/core';
 import { SampleTempFormComponent } from './pages/sample-temp-form/sample-temp-form.component';
 import { ControlStateChangeEventsComponent } from './pages/control-state-change-events/control-state-change-events.component';
+import { ReceivercomComponent } from './data-send-comp/receivercom/receivercom.component';
+import { SendercomComponent } from './data-send-comp/sendercom/sendercom.component';
 
 
 export const routes: Routes = [
@@ -43,6 +45,14 @@ export const routes: Routes = [
     {
         path: "ControlStateChangeEvents",
         component:ControlStateChangeEventsComponent
+    },
+    {
+        path:"sender",
+        component:SendercomComponent
+    },
+    {
+        path: "reciver",
+        component:ReceivercomComponent
     },
     {
         path:"viewchild",
