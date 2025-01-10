@@ -10,6 +10,8 @@ import { SampleTempFormComponent } from './pages/sample-temp-form/sample-temp-fo
 import { ControlStateChangeEventsComponent } from './pages/control-state-change-events/control-state-change-events.component';
 import { ReceivercomComponent } from './data-send-comp/receivercom/receivercom.component';
 import { SendercomComponent } from './data-send-comp/sendercom/sendercom.component';
+import { ParenttestComponent } from './inputoutputproperty/parenttest/parenttest.component';
+
 
 
 export const routes: Routes = [
@@ -54,6 +56,11 @@ export const routes: Routes = [
         path: "reciver",
         component:ReceivercomComponent
     },
+    {
+       path:"inputoutputtest",
+       component:ParenttestComponent
+    },
+    
     {
         path:"viewchild",
         component:ViewChildExampleComponent
