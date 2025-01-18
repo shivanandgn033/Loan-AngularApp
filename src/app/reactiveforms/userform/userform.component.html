@@ -1,0 +1,20 @@
+
+ <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name">
+      <div *ngIf="userForm.get('name')?.hasError('required')">
+        Name is required
+      </div>
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+      <div *ngIf="userForm.get('email')?.hasError('email')">
+        Invalid email format
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+  </form>
