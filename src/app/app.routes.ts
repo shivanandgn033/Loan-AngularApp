@@ -11,6 +11,7 @@ import { ControlStateChangeEventsComponent } from './pages/control-state-change-
 import { ReceivercomComponent } from './data-send-comp/receivercom/receivercom.component';
 import { SendercomComponent } from './data-send-comp/sendercom/sendercom.component';
 import { ParenttestComponent } from './inputoutputproperty/parenttest/parenttest.component';
+import { UserformComponent } from './reactiveforms/userform/userform.component';
 
 
 
@@ -43,6 +44,10 @@ export const routes: Routes = [
     {
         path:"tempformexmple",
         component: SampleTempFormComponent
+    },
+    {
+        path:"reactiveforms",
+        component:UserformComponent
     },
     {
         path: "ControlStateChangeEvents",
