@@ -12,6 +12,7 @@ import { ReceivercomComponent } from './data-send-comp/receivercom/receivercom.c
 import { SendercomComponent } from './data-send-comp/sendercom/sendercom.component';
 import { ParenttestComponent } from './inputoutputproperty/parenttest/parenttest.component';
 import { UserformComponent } from './reactiveforms/userform/userform.component';
+import { UserComponent } from './resouseusage/user/user.component';
 
 
 
@@ -64,6 +65,10 @@ export const routes: Routes = [
     {
        path:"inputoutputtest",
        component:ParenttestComponent
+    },
+    {
+        path:'resorceUsage',
+        component:UserComponent
     },
     
     {
