@@ -5,7 +5,6 @@ import { ParentComponent } from './pages/parent/parent.component';
 import { ViewChildExampleComponent } from './pages/view-child-example/view-child-example.component';
 import { SignalsComponent } from './pages/signals/signals.component';
 import { LinkedsignalComponent } from './pages/linkedsignal/linkedsignal.component';
-import { Component } from '@angular/core';
 import { SampleTempFormComponent } from './pages/sample-temp-form/sample-temp-form.component';
 import { ControlStateChangeEventsComponent } from './pages/control-state-change-events/control-state-change-events.component';
 import { ReceivercomComponent } from './data-send-comp/receivercom/receivercom.component';
@@ -13,6 +12,7 @@ import { SendercomComponent } from './data-send-comp/sendercom/sendercom.compone
 import { ParenttestComponent } from './inputoutputproperty/parenttest/parenttest.component';
 import { UserformComponent } from './reactiveforms/userform/userform.component';
 import { UserComponent } from './resouseusage/user/user.component';
+import { AllsignalsComponent } from './allsignals/allsignals.component';
 
 
 
@@ -41,6 +41,10 @@ export const routes: Routes = [
     {
         path:"linkedsignal",
         component:LinkedsignalComponent
+    },
+    {
+        path:"allsignals",
+        component:AllsignalsComponent
     },
     {
         path:"tempformexmple",
