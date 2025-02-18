@@ -18,7 +18,12 @@ console.log(this.reactiveform.value);
       lastname: new FormControl(''),
       email: new FormControl(''),
       password: new FormControl(''),
-      isChecked: new FormControl('')
+      isChecked: new FormControl(''),
+      address: new FormGroup({
+        city: new FormControl(''),
+        state: new FormControl(''),
+        zip: new FormControl('')
+      })
   });
 
 }
