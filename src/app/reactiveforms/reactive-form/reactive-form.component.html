@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+        <form [formGroup]="reactiveform" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+            <label for="firstname">first Name</label>
+            <input type="text" class="form-control" id="firstname" formControlName="firstname">
+            </div>
+            <div class="form-group">
+                <label for="lastname">last Name</label>
+                <input type="text" class="form-control" id="lastname" formControlName="lastname">
+                </div>
+            <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+            </div>
+            <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+            </div>
+            <div class="form-group">
+                <input type="checkbox" formControlName="isChecked">
+                <label for="isChecked">check me out</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+</div>
