@@ -8,9 +8,9 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './reactive-form.component.css'
 })
 export class ReactiveFormComponent {
-onSubmit() {
-console.log(this.reactiveform.value);
-}
+  onSubmit() {
+    console.log(this.reactiveform.value);
+  }
   reactiveform: FormGroup;
   constructor() {
     this.reactiveform = new FormGroup({
@@ -24,7 +24,7 @@ console.log(this.reactiveform.value);
         state: new FormControl(''),
         zip: new FormControl('')
       })
-  });
+    });
 
-}
+  }
 }
