@@ -13,6 +13,7 @@ import { ParenttestComponent } from './inputoutputproperty/parenttest/parenttest
 import { UserformComponent } from './reactiveforms/userform/userform.component';
 import { UserComponent } from './resouseusage/user/user.component';
 import { AllsignalsComponent } from './allsignals/allsignals.component';
+import { ReactiveFormComponent } from './reactiveforms/reactive-form/reactive-form.component';
 
 
 
@@ -73,6 +74,10 @@ export const routes: Routes = [
     {
         path:'resorceUsage',
         component:UserComponent
+    },
+    {
+        path:"reactiveforms2",
+        component:ReactiveFormComponent
     },
     
     {
